@@ -1,0 +1,43 @@
+<ion-content class="content">
+    <div class="container">
+        <img src="../../../assets/img/login/login.png">
+    </div>
+    <p class="bienvenu"><b>Bienvenu!</b></p>
+    <br>
+    <br>
+    <form>
+        <div class="md-form form-sm">
+            <img class="icon" src="../../../assets/icon/login/mail.png">
+            <input type="email" [(ngModel)]="login.username" name="login.username" class="form-control form-control-sm" placeholder="Email Address">
+
+            <ng-container *ngIf="!login.username && verifeChamp">
+                <div class="verifiechamp">* Champ obligatoire </div>
+            </ng-container>
+        </div>
+        <br>
+        <div class="md-form form-sm">
+            <img class="icon" src="../../../assets/icon/login/passe.png">
+            <input [type]="passwordType" [(ngModel)]="login.password" name="login.password" class="form-control form-control-sm" placeholder="Mot de passe">
+            <ion-icon item-end [name]="passwordIcon" class="passwordIcon" (click)='hideShowPassword()'></ion-icon>
+            <ng-container *ngIf="!login.password && verifeChamp">
+                <div class="verifiechamp">* Champ obligatoire </div>
+            </ng-container>
+        </div>
+
+        <br>
+        <p><b class="line">Mot de passe oubliées ?</b></p>
+
+        <br>
+        <ion-buttons>
+            <button type="button" class="connect" data-toggle="button" aria-pressed="false" autocomplete="off" (click)="checkin()">
+                <p style="text-align: center;color: white;padding-left: 4px;font-family: Roboto Condensed;font-size: 18px;font-weight: 700;padding-top: 10px;height: 27px;">Connecter
+                    <img style="width: 21px;"  src="../../../assets/icon/login/btn.png" >
+                </p>
+            </button>
+
+        </ion-buttons>
+    </form>
+    <br>
+
+
+</ion-content>

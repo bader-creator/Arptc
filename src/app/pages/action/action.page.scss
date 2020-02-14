@@ -1,0 +1,48 @@
+ion-label {
+    color: #65bcec;
+    font-family: "Roboto Condensed";
+    font-weight: 700;
+    line-height: 3px;
+    text-align: center;
+    font-size: 10px;
+}
+
+.icons {
+    width: 30px;
+}
+
+.container .row {
+    float: right;
+    margin-right: -4px;
+}
+
+.col {
+    padding-left: 6px;
+    padding-right: 6px;
+}
+
+.content {
+    padding-right: 2px;
+    padding-left: 0px;
+    padding-top: 17px;
+    height: 100%;
+}
+
+.content-profile {
+    position: relative;
+}
+
+.col label {
+    display: block !important;
+    position: absolute;
+    top: 10px;
+    left: 5px;
+}
+
+.statut {
+    border-radius: 50%;
+    background-color: #73bfd3;
+    box-shadow: 0px 5px4px rgba(100, 100, 100, 0.5);
+    padding: 10px;
+    height: 38px;
+}

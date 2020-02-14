@@ -1,0 +1,111 @@
+<ion-header fixed>
+    <ion-toolbar color="primary">
+        <ion-title style="color:white">Demande de Congé</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div class="profile-card card text-center">
+        <div class="card-body" style="padding: 0.8rem">
+            <div class="d-flex px-1 w-100 align-items-center text-left">
+                <div class="w-100">
+                    <p class="text-muted font-weight-bold small" style="margin-bottom: 0;float: left;">
+                        Motif Congé
+                    </p>
+                    <br>
+                    <ng-container>
+                        <select class="form-control" name="conge.typeConge" [(ngModel)]="conge.typeConge">
+                              <option [value]="1" >Congé Maladie</option>
+                              <option [value]="2" >Congé Motif Personnel</option>
+                              <option [value]="3" >Congé Maternité</option>
+                              <option [value]="4" >Congé Paternité</option>
+                        </select>
+                    </ng-container>
+                    <br>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <br>
+
+    <div class="profile-card card text-center">
+
+        <div class="card-body" style="padding: 0.8rem">
+
+            <div class="d-flex px-1 w-100 align-items-center text-left">
+                <div class="w-100">
+                    <p class="text-muted font-weight-bold small" style="margin-bottom: 0;">
+                        Date debut :
+                    </p>
+                    <div class="row">
+                        <ion-item style="margin-right: 10px;">
+                            <ion-icon name="calendar"></ion-icon>
+                            <ion-datetime displayFormat="DD MMM ,YYYY" min="2019-10-17" max="2022-12-31" placeholder="Select Date" [(ngModel)]="conge.dateDebutConge" name="conge.datedebut"></ion-datetime>
+                        </ion-item>
+
+                        <ion-item>
+                            <ion-icon name="time"></ion-icon>
+                            <ion-datetime displayFormat="HH:mm" placeholder="Select Time" hourValues="8" minuteValues="0" [(ngModel)]="conge.timedebut" name="conge.timedebut"></ion-datetime>
+                        </ion-item>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+
+    <div class="profile-card card text-center">
+
+        <div class="card-body" style="padding: 0.8rem">
+
+            <div class="d-flex px-1 w-100 align-items-center text-left">
+                <div class="w-100">
+                    <p class="text-muted font-weight-bold small" style="margin-bottom: 0;">
+                        Date fin :
+                    </p>
+
+
+                    <div class="row">
+                        <ion-item style="margin-right: 10px;">
+                            <ion-icon name="calendar"></ion-icon>
+                            <ion-datetime displayFormat="DD MMM ,YYYY" min="2019-10-17" max="2022-12-31" placeholder="Select Date" [(ngModel)]="conge.dateFinConge" name="conge.datefin"></ion-datetime>
+                        </ion-item>
+
+                        <ion-item>
+                            <ion-icon name="time"></ion-icon>
+                            <ion-datetime displayFormat="HH:mm" placeholder="Select Time" hourValues="18" minuteValues="0" [(ngModel)]="conge.timefin" name="conge.timefin"></ion-datetime>
+                        </ion-item>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+
+
+    <div class="profile-card card text-center">
+        <div class="card-body" style="padding: 1rem">
+            <div class="d-flex  w-100 align-items-center text-left">
+                <div class="w-100">
+                    <p class="text-muted font-weight-bold small" style="margin-bottom: 0;">
+                        Date reprise :
+                    </p>
+                    <div class="row">
+                        <ion-item style="margin-right: 10px;">
+                            <ion-icon name="calendar"></ion-icon>
+                            <ion-datetime min="2019-10-17" max="2022-12-31" displayFormat="DD MMM ,YYYY" placeholder="Select Date" [(ngModel)]="conge.dateReprise" name="conge.datereprise"></ion-datetime>
+                        </ion-item>
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+    </div>
+    <!------------------------------>
+    <br>
+    <button type="button" class="btn btn-block btn-success" (click)="DemandeConge()">Confirmer demande</button>
+</ion-content>

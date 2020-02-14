@@ -1,0 +1,81 @@
+ion-content {
+    --ion-background-color: #FCFCFD;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+p {
+    font-size: 12px;
+    color: gray;
+    text-align: center;
+}
+
+//bienvenu
+.bienvenu {
+    text-align: center;
+    color: #0b1b68;
+    font-family: "Roboto Condensed";
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 77px;
+}
+
+//forget your password
+.line {
+    z-index: 3;
+    color: #5ea3f4;
+    font-family: "Roboto Condensed";
+    font-size: 11px;
+    font-weight: 700;
+    line-height: 48px;
+    margin-left: 23px;
+    text-align: center;
+}
+
+//input 
+.form-control {
+    outline: 0;
+    border-width: 0 0 1px;
+    border-color: black;
+    margin-left: 20px;
+    width: 89%;
+    padding-left: 35px;
+    background-color: #FCFCFD;
+}
+
+//boutton sign in 
+.connect {
+    border-radius: 34px;
+    background: linear-gradient(180deg, #7BD9FD, #296DBD);
+    position: absolute;
+    align-content: center;
+    right: 30%;
+    bottom: -6px;
+    width: 42%;
+}
+
+.icon {
+    width: 20px;
+    position: absolute;
+    left: 22px;
+    margin-top: 4px;
+}
+
+.passwordIcon {
+    font-size: 2rem !important;
+    position: relative !important;
+    top: -29px !important;
+    left: -10% !important;
+    margin: 0 auto !important;
+    float: right;
+    width: 23px;
+}
+
+.verifiechamp {
+    font-size: 10px;
+    color: red;
+    margin-left: 22px;
+    margin-top: 4px;
+}

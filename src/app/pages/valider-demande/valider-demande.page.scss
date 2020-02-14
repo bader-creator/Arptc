@@ -1,0 +1,67 @@
+.container .row {
+    float: right;
+    margin-right: -4px;
+}
+
+.col {
+    padding-left: 6px;
+    padding-right: 6px;
+}
+
+.icon {
+    border-radius: 50%;
+    box-shadow: 0px 1px 6px 0px rgba(134, 134, 134, 0.59);
+    width: 50px;
+    padding: 10px;
+    height: 50px;
+    background-color: white;
+}
+
+.content {
+    padding-right: 2px;
+    padding-left: 0px;
+    padding-top: 14px;
+    height: 100%;
+}
+
+.content-profile {
+    position: relative;
+}
+
+.list-img {
+    margin-left: -17px;
+    box-shadow: -1px 1px 6px 0px rgba(134, 134, 134, 0.59);
+    width: 114px;
+    height: 118px;
+}
+
+.lables {
+    position: absolute;
+    left: 113px;
+    font-weight: 700;
+    font-size: 18px;
+    z-index: 3;
+    color: #686868;
+    font-family: Roboto Condensed;
+    overflow: initial;
+}
+
+.police {
+    font-weight: 700;
+    font-size: 18px;
+    z-index: 3;
+    color: #686868;
+    font-family: Roboto Condensed;
+    padding-left: 6px;
+}
+
+.card-footer {
+    padding: 0.75rem 1.25rem;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 0.5px solid #000034;
+    width: 100%;
+    border-radius: .25rem;
+    border: 1px solid rgba(0, 0, 0, .125);
+}

@@ -1,0 +1,170 @@
+<ion-content>
+    <div class="banner">
+        <!--image profil-->
+        <div class="profile">
+            <div class="content-profile">
+                <img src='{{env}}{{dataUser?.path || "empty.png"}}' class="profile-img shadow-lg img-fluid z-depth-1 rounded-circle">
+                <!--Camera-->
+                <img src="../../../assets/img/profil/camera.png" class="img-fluid camera-img" (click)="ChangePicture()">
+                <!---->
+            </div>
+        </div>
+
+        <!---->
+        <!--image sortie-->
+        <img class="sortie" src="../../../assets/img/dashboard/sortie.png" (click)="logout()">
+        <!---->
+    </div>
+    <!--back to dashboard-->
+    <div class="text" style="z-index: 180;margin-bottom: 2px;margin-top: -11px;position: absolute;top: 85px;margin-left: 9px; color: white;font-family: Roboto Condensed;font-size: 24px;">
+        <ion-icon name="arrow-round-back" style="font-size: 22px;margin-right: 5px;" routerDirection="forward" [routerLink]="'/dashboard'"></ion-icon>
+        Profil</div>
+    <!---->
+
+    <!------------------------icon profil -------------------------------->
+    <div class="lg-container mt-5">
+        <div class="row justify-content-center align-items-center h-100">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                <div class="profile-card card">
+                    <div class="card-body">
+                        <div class="row mt-1 justify-content-center">
+                            <div class="col col-card-body">
+
+                                <img src="../../../assets/img/profil/conge.png">
+                                <label class="autorisation" style="font-size: 12px;">Solde Congé</label>
+                                <label style="font-weight: 700;font-size: 13px;z-index: 3;color: #a09e9e;font-family: Roboto Condensed;">{{soldePersonnel?.soldeConge}} J</label>
+
+                            </div>
+                            <div class="col col-card-body">
+
+                                <img src="../../../assets/img/profil/maladie.png">
+                                <label class="autorisation" style="font-size: 12px;">Solde Maladie</label>
+                                <label style="font-weight: 700;font-size: 13px;z-index: 3;color: #a09e9e;font-family: Roboto Condensed;">{{soldePersonnel?.soldeMaladie}} J</label>
+                            </div>
+
+                            <div class="col col-card-body">
+
+                                <img src="../../../assets/img/profil/sortie.png">
+                                <label class="autorisation" style="font-size: 12px;">Cumule Sortie</label>
+                                <label style="font-weight: 700;font-size: 13px;z-index: 3;color: #a09e9e;font-family: Roboto Condensed;">{{((soldePersonnel?.cumulSortieARetirerConge)-(soldePersonnel?.cumulSortieARetirerConge%60))/60  || "0"  }}h {{soldePersonnel?.cumulSortieARetirerConge%60 || "0"}} m</label>
+
+                            </div>
+                        </div>
+                    </div>
+                    <br><br>
+                </div>
+
+
+
+            </div>
+        </div>
+    </div>
+    <!------------------------------------------------------------->
+
+    <!------------------------card contenu  -------------------------------->
+    <div class="lg-container">
+        <div class="row justify-content-center align-items-center h-100">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                <div class="profile-card py-3 card">
+                    <div class="card-body px-4 px-md-3 py-3">
+                        <div class="row mt-1 justify-content-center">
+                            <div class="col">
+                                <label style="font-weight: 700;font-size: 18px;z-index: 3;color: #686868;font-family: Roboto Condensed;">Full Name</label>
+                                <label style="font-weight: 700;position: absolute;top: 27px;left: 14px;font-size: 13px;z-index: 3;color: #a09e9e;font-family: Roboto Condensed;">{{dataUser?.firstName}}</label>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+    </div>
+    <div class="lg-container">
+        <div class="row justify-content-center align-items-center h-100">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                <div class="profile-card py-3 card">
+                    <div class="card-body px-4 px-md-3 py-3">
+                        <div class="row mt-1 justify-content-center">
+                            <div class="col">
+                                <label style="font-weight: 700;font-size: 18px;z-index: 3;color: #686868;font-family: Roboto Condensed;">Username</label>
+                                <label style="font-weight: 700;position: absolute;top: 27px;left: 14px;font-size: 13px;z-index: 3;color: #a09e9e;font-family: Roboto Condensed;">{{dataUser?.lastName}}</label>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+    </div>
+    <div class="lg-container">
+        <div class="row justify-content-center align-items-center h-100">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                <div class="profile-card py-3 card">
+                    <div class="card-body px-4 px-md-3 py-3">
+                        <div class="row mt-1 justify-content-center">
+                            <div class="col">
+                                <label style="font-weight: 700;font-size: 18px;z-index: 3;color: #686868;font-family: Roboto Condensed;">Mobile</label>
+                                <label style="font-weight: 700;position: absolute;top: 27px;left: 14px;font-size: 13px;z-index: 3;color: #a09e9e;font-family: Roboto Condensed;">{{dataUser?.phone}} </label>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+    </div>
+    <div class="lg-container">
+        <div class="row justify-content-center align-items-center h-100">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                <div class="profile-card py-3 card">
+                    <div class="card-body px-4 px-md-3 py-3">
+                        <div class="row mt-1 justify-content-center">
+                            <div class="col">
+                                <label style="font-weight: 700;font-size: 18px;z-index: 3;color: #686868;font-family: Roboto Condensed;">E-mail</label>
+                                <label style="font-weight: 700;position: absolute;top: 27px;left: 14px;font-size: 13px;z-index: 3;color: #a09e9e;font-family: Roboto Condensed;">{{dataUser?.email}} </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+    </div>
+    <!------------------------------------------------------------->
+</ion-content>
+<ion-footer no-padding no-marging>
+    <!-------tabss--------->
+    <ion-segment no-padding no-marging style="font-size: 10px;" [(ngModel)]="segment">
+        <ion-segment-button style="min-width: 60px;" value="Home" checked routerDirection="forward" [routerLink]="'/dashboard'">
+            <img style=" width: 26px;" src="../../../assets/icon/dashboard/home.png">
+            <ion-label>Home</ion-label>
+        </ion-segment-button>
+
+        <ion-segment-button style="min-width: 60px;" value="Actions" routerDirection="forward" [routerLink]="'/action'">
+            <img style=" width: 26px;" src="../../../assets/icon/dashboard/action.png">
+            <ion-label>Actions</ion-label>
+        </ion-segment-button>
+
+        <ion-segment-button style="min-width: 60px;" value="Congé" routerDirection="forward" [routerLink]="'/demande'">
+            <img style=" width: 26px;" src="../../../assets/icon/dashboard/conge.png">
+            <ion-label>Congé</ion-label>
+        </ion-segment-button>
+
+        <ion-segment-button style="min-width: 60px;" value="Profile" routerDirection="forward" [routerLink]="'/profil'">
+            <img style=" width: 26px;" src="../../../assets/icon/dashboard/profil.png">
+            <ion-label>Profile</ion-label>
+        </ion-segment-button>
+    </ion-segment>
+    <!-------tabss--------->
+</ion-footer>

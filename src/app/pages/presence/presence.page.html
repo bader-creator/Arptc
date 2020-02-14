@@ -1,0 +1,65 @@
+<ion-header fixed>
+    <ion-toolbar color="primary" style="padding-top: 32px;">
+        <ion-title style="color:white ;position: absolute;">Présence</ion-title>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <img class="icons" src="../../../assets/icon/presence/supervivsion.png">
+                </div>
+                <div class="col">
+                    <img class="icons" src="../../../assets/icon/presence/search.png">
+                </div>
+                <div class="col">
+                    <img class="icons" src="../../../assets/icon/presence/exit.png">
+                </div>
+            </div>
+        </div>
+    </ion-toolbar>
+
+</ion-header>
+
+<ion-content>
+    <div class="container" style="height: 100%; width: 100%;">
+        <div class="row" *ngFor="let info of listinfouser" style="height: 100px; width: 102%; margin-bottom: 20px;">
+            <div class="container-fluid content">
+                <div class="card">
+                    <div class="card-body" style="padding:20px;">
+                        <div class="d-flex  w-100 align-items-center text-left">
+                            <div class="col">
+                                <div class="content-profile">
+                                    <img src='{{env}}{{info?.user?.path || "empty.png"}}' class="list-img img-fluid z-depth-1 rounded-circle">
+                                </div>
+                                <label style="font-weight: 700;font-size: 18px;z-index: 3;color: #686868;font-family: Roboto Condensed; overflow: initial;">{{info?.user?.firstName}} {{info?.user?.lastName}}</label>
+                                <div class="content-profile">
+                                    <img src='../../../assets/icon/presence/present.png' class="statut">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!------------------------absent ---
+        <div class="row" style="height: 100px; width: 102%; margin-bottom: 20px;">
+            <div class="container-fluid content">
+                <div class="card">
+                    <div class="card-body" style="padding:20px;">
+                        <div class="d-flex  w-100 align-items-center text-left">
+                            <div class="col">
+                                <div class="content-profile">
+                                    <img src='../../../assets/img/dashboard/profil.png' class="list-img img-fluid z-depth-1 rounded-circle">
+                                </div>
+                                <label style="font-weight: 700;font-size: 18px;z-index: 3;color: #686868;font-family: Roboto Condensed;">Jane.F</label>
+                                <div class="content-profile">
+                                    <img src='../../../assets/icon/presence/conge.png' class="statut" style="background-color:#e652c4 ;">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        ----------------------------->
+
+</ion-content>

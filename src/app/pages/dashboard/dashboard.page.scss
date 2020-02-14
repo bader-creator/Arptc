@@ -1,0 +1,74 @@
+.header {
+    width: 100%;
+    background: url(../../../assets/img/dashboard/content.png) center center no-repeat;
+    background-size: cover;
+    text-align: center;
+    height: 40%;
+    margin-left: -1px;
+}
+
+.header img {
+    max-width: 30%;
+    height: auto;
+    width: 12%;
+}
+
+ion-label {
+    color: #65bcec;
+    font-family: "Roboto Condensed";
+    font-weight: 700;
+    line-height: 3px;
+    text-align: center;
+    font-size: 10px;
+}
+
+//les sous titres des modules 
+.module {
+    text-align: center;
+    color: #0b1b68;
+    font-family: "Roboto Condensed";
+    font-size: 19px;
+    font-weight: 700;
+    padding-top: 8%;
+    margin-top: 0%;
+}
+
+.icon {
+    width: 31%;
+}
+
+.Nom {
+    color: #ffffff;
+    font-family: "Roboto Condensed";
+    position: relative;
+    text-align: center;
+    width: 100%;
+    font-size: 100%;
+    top: 10px;
+}
+
+.sortie {
+    color: #ffffff;
+    position: absolute;
+    width: 1;
+    width: 9%;
+    top: 107px;
+    right: 46px;
+}
+
+.setTop {
+    margin-top: -4%;
+    justify-content: center;
+}
+
+.validerbutton {
+    position: absolute;
+    left: 0;
+    bottom: 13%;
+    text-align: center;
+    color: #0b1b68;
+    font-family: "Roboto Condensed";
+    font-size: 115%;
+    font-weight: 700;
+    right: 0;
+}

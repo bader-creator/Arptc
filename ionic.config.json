@@ -1,0 +1,7 @@
+{
+  "name": "Cosap",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

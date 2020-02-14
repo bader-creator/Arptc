@@ -1,0 +1,42 @@
+//_________boutton__________
+.start {
+    border-radius: 34px;
+    background: white;
+}
+
+//___________________7
+//_________content__________
+.menu {
+    width: 100%;
+    height: 100%;
+}
+
+//___________________
+//_________bg__________
+.splash-bg {
+    background: url('../../../assets/img/splach/background.png') center center no-repeat;
+    background-size: cover;
+}
+
+.flex-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+}
+
+//___________________
+//__________pargraphe cosap_________
+.pargraphe {
+    color: #ffffff;
+    font-family: "Roboto Condensed";
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 17px;
+    font-size: 100%;
+    width: 85%;
+    margin: 0 auto;
+}
+
+//___________________

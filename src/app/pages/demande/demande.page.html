@@ -1,0 +1,104 @@
+<!------------------------SLIDES-------------------------------->
+<ion-content>
+    <super-tabs>
+        <super-tabs-toolbar slot="top" style="background-color: #5ea3f4;padding: 10px;">
+            <super-tab-button style="padding: 40px;padding-bottom: 47px;">
+                <img class="icon" src="../../../assets/img/dashboard/conge.png">
+                <ion-label style="padding-top: 9px;">D.Congé</ion-label>
+            </super-tab-button>
+            <super-tab-button style="padding: 40px;padding-bottom: 47px;">
+                <img class="icon" src="../../../assets/img/profil/sortie.png">
+                <ion-label style="padding-top: 9px;">D.Sortie</ion-label>
+            </super-tab-button>
+        </super-tabs-toolbar>
+        <super-tabs-container>
+            <super-tab>
+                <!------------------------CONGE-------------------------------->
+                <ion-content>
+                    <div class=" container ">
+                        <div class="row " *ngFor="let d of demandeConge ">
+                            <div class="container-fluid content ">
+                                <div class="card " style="height: 100px; width: 100%; position: relative;">
+                                    <div class="card-body shadow-lg " style="padding:10px; ">
+                                        <div class="d-flex w-100 align-items-center text-left ">
+                                            <div class="col ">
+                                                <div class="row ">
+                                                    <div><i class="fas fa-calendar-day "></i><label class="police ">{{d?.dateDebutConge | date: 'dd-MM-yyyy'}}</label></div>
+                                                    <div style="position: absolute;right: 8px; "><i class="fas fa-calendar-day "></i><label class="police ">{{d?.dateFinConge | date: 'dd-MM-yyyy'}}</label></div>
+                                                </div>
+                                                <div class="row " style="padding-top: 15px; ">
+                                                    <div *ngIf='d?.nbJours=="1 "'><i class="fas fa-sun "></i><label class="police ">{{d?.nbJours}} Jour</label></div>
+                                                    <div *ngIf='d?.nbJours!="1 "'><i class="fas fa-sun "></i><label class="police ">{{d?.nbJours}} Jours</label></div>
+
+                                                    <div *ngIf='d?.etat=="Validée"' style=" position: absolute; right: 43px;"><i class="far fa-flag " style="color:green "></i><label class="police " style="color:green "> {{d?.etat}}</label></div>
+                                                    <div *ngIf='d?.etat=="Refusée"' style=" position: absolute; right: 42px;"><i class="far fa-flag " style="color:#CC0000 "></i><label class="police " style="color:#CC0000 ">{{d?.etat}}</label></div>
+                                                    <div *ngIf='d?.etat=="En Cours"' style=" position: absolute; right: 31px;"><i class="far fa-flag " style="color:#FF8800 "></i><label class="police " style="color:#FF8800 ">{{d?.etat}}</label></div>
+                                                    <div *ngIf='d?.etat=="Supprimée"' style=" position: absolute; right: 16px;"><i class="far fa-flag " style="color:#ff4444 "></i><label class="police " style="color:#ff4444 "> {{d?.etat}}</label></div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br><br><br>
+                </ion-content>
+                <!----------------------------fooeter---------------------------->
+                <ion-footer no-padding no-marging>
+                    <ion-fab vertical="bottom" horizontal="end">
+                        <ion-fab-button routerDirection="forward" [routerLink]="'/demande-conge'">
+                            <ion-icon name="add"></ion-icon>
+                        </ion-fab-button>
+                    </ion-fab>
+                </ion-footer>
+                <!------------------------------- -------------------------------->
+            </super-tab>
+            <super-tab>
+                <ion-content>
+                    <!------------------------SORITE-------------------------------->
+                    <div class=" container ">
+                        <div class="row " *ngFor="let s of deamndeSortie ">
+                            <div class="container-fluid content ">
+                                <div class="card " style="height: 100px; width: 100%;  position: relative;">
+                                    <div class="card-body shadow-lg " style="padding:10px; ">
+                                        <div class="d-flex w-100 align-items-center text-left ">
+                                            <div class="col ">
+                                                <div class="row ">
+                                                    <div><i class="fas fa-calendar-day "></i><label class="police ">{{s?.dateSortie | date: 'dd-MM-yyyy'}} {{s?.heureDebut| date: 'HH:mm'}}</label></div>
+                                                    <div style="position: absolute;right: 50px;"><i class="fas fa-calendar-day "></i><label class="police ">{{s?.heureFin| date: 'HH:mm'}}</label></div>
+                                                </div>
+                                                <div class="row " style="padding-top: 15px; ">
+                                                    <div><i class="fas fa-sun "></i><label class="police ">{{((s?.duree)-(s?.duree%60))/60}}h{{s?.duree%60}}m</label></div>
+
+                                                    <div *ngIf='s?.etat=="Validée"' style=" position: absolute; right: 34px;"><i class="far fa-flag " style="color:green "></i><label class="police " style="color:green "> {{s?.etat}}</label></div>
+                                                    <div *ngIf='s?.etat=="Refusée"' style=" position: absolute; right: 28px;"><i class="far fa-flag " style="color:#CC0000 "></i><label class="police " style="color:#CC0000 "> {{s?.etat}}</label></div>
+                                                    <div *ngIf='s?.etat=="En Cours"' style=" position: absolute; right: 22px;"><i class="far fa-flag " style="color:#FF8800 "></i><label class="police " style="color:#FF8800 "> {{s?.etat}}</label></div>
+                                                    <div *ngIf='s?.etat=="Supprimée"' style=" position: absolute; right: 8px;"><i class="far fa-flag " style="color:#ff4444 "></i><label class="police " style="color:#ff4444 "> {{s?.etat}}</label></div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-------------------------------------------------------->
+                    <br><br><br>
+                </ion-content>
+                <!----------------------------fooeter---------------------------->
+                <ion-footer no-padding no-marging>
+                    <ion-fab vertical="bottom" horizontal="end">
+                        <ion-fab-button routerDirection="forward" [routerLink]="'/demande-sortie'">
+                            <ion-icon name="add"></ion-icon>
+                        </ion-fab-button>
+                    </ion-fab>
+                </ion-footer>
+                <!-------------------------------------------------------->
+
+            </super-tab>
+        </super-tabs-container>
+    </super-tabs>
+</ion-content>
